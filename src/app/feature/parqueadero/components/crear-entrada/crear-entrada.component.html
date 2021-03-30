@@ -1,0 +1,48 @@
+<div class="card bg-white text-dark">
+  <div class="card-header ">{{ titulo }}</div>
+  <div class="card-body">
+
+    <form [formGroup]="entradaForm" >
+      <div class="form-group col">
+
+      </div>
+      <div class="form-group row">
+        <div class="form-group col-md-5">
+          <label for="tipoVehiculo">Tipo de Vehiculo</label>
+          <select formControlName="tipoVehiculo" id="tipoVehiculo" name="tipoVehiculo" class="form-control">
+            <option value="1" selected>Carro</option>
+            <option value="2">Moto</option>
+          </select>
+        </div>
+
+        <div class="form-group col-md-5">
+          <label for="marcaVehiculo">Marca del vehiculo</label>
+          <input validar type="text" id="marcaVehiculo" name="marcaVehiculo" class="form-control" maxlength="20"
+            formControlName="marcaVehiculo">
+        </div>
+
+      </div>
+
+      <div class="form-group row">
+        <div class="form-group col-md-5">
+          <label for="modeloVehiculo">Modelo del vehiculo</label>
+          <input validar type="text" class="form-control" name="modeloVehiculo" id="modeloVehiculo" maxlength="20"
+            formControlName="modeloVehiculo">
+        </div>
+
+        <div class="form-group col-md-5">
+          <label for="placaVehiculo">placa del vehiculo</label>
+          <input validar type="text" class="form-control" name="placaVehiculo" id="placaVehiculo" maxlength="7"
+            formControlName="placaVehiculo">
+        </div>
+        
+      </div>
+      <div class="form-group row">
+        <div class="col-sm-6">
+          <button class="btn btn-secondary" id="btnCrearEntrada" role="button" (click)="crear()" type="submit">Crear</button>
+        </div>
+      </div>
+    </form>
+
+  </div>
+</div>

@@ -1,0 +1,30 @@
+<div class="my-2 text-left d-flex">
+    <h5 class="card-title ">Historial de Salidas</h5>
+    
+  </div>
+  <table class="table text-dark table-bordered table-striped">
+    <thead>
+    <tr>
+      <th>Id</th>
+      <th>Tipo Vehiculo</th>
+      <th>Marca-modelo</th>
+      <th>Placa</th>
+      <th>fecha de Entrada</th>
+      <th>fecha de Salida</th>
+      <th>Valor Pagado</th>
+
+    </tr>
+    </thead>
+    <tbody class="historial">
+    <tr *ngFor="let entrada of listaHistorial | async">
+      <td>{{ entrada.id }}</td>
+      <td>{{ entrada.tipoVehiculo==1 ? "Carro" : "Moto" }}</td>
+      <td>{{ entrada.marcaVehiculo+" - "+entrada.modeloVehiculo }}</td>
+      <td>{{ entrada.placaVehiculo }}</td>
+      <td>{{ entrada.fecha| date: 'short' }}</td>
+      <td>{{ entrada.fechaSalida| date: 'short' }}</td>
+      <td>{{ entrada.valorTarifa }}</td>
+
+    </tr>
+    </tbody>
+  </table>

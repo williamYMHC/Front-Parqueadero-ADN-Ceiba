@@ -1,0 +1,36 @@
+<div class="card bg-white text-dark">
+  <div class="card-header">
+    <ul class="nav nav-tabs card-header-tabs">
+      <li class="nav-item">
+        <a class="nav-link active" href="#" id="entrada-tab" data-toggle="tab" href="#entrada" role="tab" aria-controls="entrada" aria-selected="true" >Entradas</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#" id="historial-tab" data-toggle="tab" href="#historial" role="tab" aria-controls="historial" aria-selected="true" >Historial</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">Disabled</a>
+      </li>
+    </ul>  
+  </div>
+  
+  <div class="card-body text-primary text-dark">
+    <span class="badge badge-info">{{"Tarifa del dia Moto:   $"}}  {{ tarifaDiaMoto | async }}</span>
+    &nbsp;&nbsp;&nbsp;
+    <span class="badge badge-info">{{"Tarifa del dia Carro:   $"}}  {{ tarifaDiaCarro | async }}</span>
+
+    <div class="tab-content" id="myTabContent">
+      <div class="tab-pane fade show active" id="entrada" role="tabpanel" aria-labelledby="entrada-tab">
+
+        <app-entrada></app-entrada>
+      </div>
+      <div class="tab-pane fade" id="historial" role="tabpanel" aria-labelledby="historial-tab">
+
+        <app-historial></app-historial>
+      </div>
+      <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
+    </div>
+
+    
+
+  </div>
+</div>
